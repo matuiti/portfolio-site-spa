@@ -1,10 +1,16 @@
 import './App.css'
-import { Button } from "@/components/ui/button"
+import Header from '@/components/Header'
+import Contents from '@/components/Contents'
+import Animations from '@/components/Animations'
+import Footer from '@/components/Footer'
 function App() {
 
   return (
     <>
-      <Button>まだだよ</Button>
+      <Header />
+      <Contents />
+      <Animations />
+      <Footer />
     </>
   )
 }
