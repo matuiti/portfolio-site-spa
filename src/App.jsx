@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <Button>Click me</Button>
+      <Button>まだだよ</Button>
     </>
   )
 }
