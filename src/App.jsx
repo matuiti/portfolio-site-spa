@@ -1,15 +1,15 @@
-import './App.css'
-import Header from '@/components/Header'
-import Contents from '@/components/Contents'
-import Animations from '@/components/Animations'
-import Footer from '@/components/Footer'
-function App() {
+import "./App.css"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import ContentsArea from "./components/ContentsArea"
+import AnimationsArea from "./components/AnimationsArea"
 
+function App() {
   return (
     <>
       <Header />
-      <Contents />
-      <Animations />
+      <ContentsArea />
+      <AnimationsArea />
       <Footer />
     </>
   )
