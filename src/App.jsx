@@ -1,9 +1,15 @@
-import "./App.css"
+import "@/App.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import ContentsArea from "./components/ContentsArea"
-import AnimationsArea from "./components/AnimationsArea"
-import { useState } from "react"
+import Contents from "@/components/Contents"
+import AnimationsArea from "@/components/AnimationsArea"
+import { useState, createContext } from "react"
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const handleChangeModeContext = createContext();
+// eslint-disable-next-line react-refresh/only-export-components
+export const modeContext = createContext();
+
 
 function App() {
   const [mode, setMode] = useState("home")
@@ -14,7 +20,7 @@ function App() {
       return (
         <>
           <Header />
-          <ContentsArea />
+          <Contents />
           <AnimationsArea />
           <Footer />
         </>
@@ -22,12 +28,19 @@ function App() {
     } else if (mode === "contents") {
       return (
         <>
-          <ContentsArea />
+          <Contents />
         </>
       )
     }
   }
 
-  return <>{renderSections()}</>
+  return (
+    <handleChangeModeContext.Provider value={handleChangeMode}>
+      <modeContext.Provider value={mode}>
+        {renderSections()}
+      </modeContext.Provider>
+    </handleChangeModeContext.Provider>
+  )
 }
+
 export default App
