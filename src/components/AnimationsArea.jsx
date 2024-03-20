@@ -1,12 +1,12 @@
-import SectionHead from "./SectionHead"
+import SectionHeader from "./SectionHeader"
 
-const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugiat deserunt dolorem corrupti, veritatis minima!`;
+const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugiat deserunt dolorem corrupti, veritatis minima!`
 
 const AnimationsArea = () => {
   return (
-    <div className="mt-40 container text-center">
-      <SectionHead title={"Animations"} description={description}/>
-    </div>
+    <section className="mt-40 container text-center">
+      <SectionHeader title={"Animations"} description={description} />
+    </section>
   )
 }
 

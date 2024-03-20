@@ -1,14 +1,14 @@
-import Contents from "./Contents";
-import SectionHead from "./SectionHead"
+import Contents from "./Contents"
+import SectionHeader from "./SectionHeader"
 
-const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas iste minus deleniti veritatis expedita est aliquam recusandae. Dolores, veritatis.`;
+const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas iste minus deleniti veritatis expedita est aliquam recusandae. Dolores, veritatis.`
 
 const ContentsArea = () => {
   return (
-    <main className="m-auto container text-center">
-      <SectionHead title="Contents" description={description} />
+    <section className="m-auto container text-center">
+      <SectionHeader title="Contents" description={description} />
       <Contents />
-      </main>
+    </section>
   )
 }
 

@@ -1,4 +1,4 @@
-const SectionHead = ({ title, description }) => {
+const SectionHeader = ({ title, description }) => {
   return (
     <div>
       <h2 className="font-bold text-3xl">{title}</h2>
@@ -7,4 +7,4 @@ const SectionHead = ({ title, description }) => {
   )
 }
 
-export default SectionHead
+export default SectionHeader
