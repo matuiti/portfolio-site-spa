@@ -41,7 +41,7 @@ const Contents = () => {
       return (
         <>
           <SectionHeader title={title} description={description} />
-          <ul className="w-full py-32 px-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
+          <ul className="w-full pt-10 pb-16 px-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
             {contentsOutput}
           </ul>
         </>

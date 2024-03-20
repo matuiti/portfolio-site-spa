@@ -5,12 +5,12 @@ import { handleChangeModeContext } from "../../App"
 function ReturnButton() {
   const changeMode = useContext(handleChangeModeContext)
   const handleClick = () => {
-    changeMode("home") // クリックされたときに changeMode を実行する関数を定義
+    changeMode("home")
   }
   return (
     <Button
-      className="tracking-widest mt-40 ml-auto flex"
-      onClick={handleClick} // handleClick 関数を onClick ハンドラーに渡す
+      className="tracking-widest mt-40 m-auto flex"
+      onClick={handleClick}
     >
       TOPへもどる
     </Button>

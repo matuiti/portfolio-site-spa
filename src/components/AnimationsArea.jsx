@@ -4,7 +4,7 @@ const description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. In
 
 const AnimationsArea = () => {
   return (
-    <section className="mt-40 container text-center">
+    <section className="container text-center">
       <SectionHeader title={"Animations"} description={description} />
     </section>
   )

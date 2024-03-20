@@ -28,7 +28,9 @@ function App() {
     } else if (mode === "contents") {
       return (
         <>
+          <Header />
           <Contents />
+          <Footer />
         </>
       )
     }
