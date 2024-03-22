@@ -38,7 +38,7 @@ const Contents = () => {
     <li
       key={content.name}
       onClick={handleClick}
-      className="border border-solid border-green-700"
+      className="border border-solid border-green-700 cursor-pointer"
     >
       {content.name}
     </li>
