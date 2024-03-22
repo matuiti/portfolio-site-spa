@@ -2,12 +2,14 @@ import { useState,useContext } from "react"
 import SectionHeader from "@/components/SectionHeader"
 import ReturnButton from "@/components/ui/returnButton"
 import { modeContext,handleChangeModeContext } from "@/App"
+import Omikuji from "./contents/Omikuji"
+import Stopwatch from "./contents/Stopwatch"
 
 const title = "Contents"
 const description = `現在開発中です！`
 const contents = [
-  { name: "SaruGame" },
-  { name: "YakinikuTetris" },
+  { name: "Stopwatch" },
+  { name: "Omikuji" },
   { name: "YudetamagoTimer" },
   { name: "nanndemoii1" },
   { name: "nanndemoii2" },
@@ -26,6 +28,16 @@ const Contents = () => {
     changeMode("contents")
   }
 
+  const contentOutput = (current) => {
+    switch (current) {
+      case "Stopwatch":
+        return <Stopwatch />
+      case "Omikuji":
+        return <Omikuji />
+      default:
+        break;
+    }
+  }
   const contentsOutput = contents.map((content) => (
     <li
       key={content.name}
@@ -52,7 +64,7 @@ const Contents = () => {
       return (
         <>
           <ul className="w-full py-32 px-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
-            {contentsOutput}
+            {contentOutput(current)}
           </ul>
           <ReturnButton />
         </>
