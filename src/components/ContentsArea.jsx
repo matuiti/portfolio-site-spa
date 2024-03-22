@@ -45,7 +45,6 @@ const Contents = () => {
   ))
   const renderSections = () => {
     if (mode === "home") {
-      console.log("if home");
       return (
         <>
           <SectionHeader title={title} description={description} />
@@ -55,8 +54,6 @@ const Contents = () => {
         </>
       )
     } else if (mode === "contents") {
-      console.log("if contents");
-
       return (
         <>
           <div className="w-full py-32 px-10">
