@@ -2,21 +2,17 @@ import { useState,useContext } from "react"
 import SectionHeader from "@/components/SectionHeader"
 import ReturnButton from "@/components/ui/returnButton"
 import { modeContext,handleChangeModeContext } from "@/App"
-import Omikuji from "./contents/Omikuji"
-import Stopwatch from "./contents/Stopwatch"
+import Omikuji from "./contents/omikuji/Omikuji"
+import Stopwatch from "./contents/stopwatch/Stopwatch"
 
 const title = "Contents"
 const description = `現在開発中です！`
 const contents = [
   { name: "Stopwatch" },
   { name: "Omikuji" },
-  { name: "YudetamagoTimer" },
-  { name: "nanndemoii1" },
-  { name: "nanndemoii2" },
-  { name: "nanndemoii3" },
-  { name: "nanndemoii4" },
-  { name: "nanndemoii5" },
-  { name: "nanndemoii6" },
+  // { name: "SaruGame" },
+  // { name: "YakinikuTetris" },
+  // { name: "YudetamagoTimer" },
 ]
 
 const Contents = () => {
@@ -63,9 +59,9 @@ const Contents = () => {
 
       return (
         <>
-          <ul className="w-full py-32 px-10">
+          <div className="w-full py-32 px-10">
             {contentOutput(current)}
-          </ul>
+          </div>
           <ReturnButton />
         </>
       )

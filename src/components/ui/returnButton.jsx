@@ -9,7 +9,7 @@ function ReturnButton() {
   }
   return (
     <Button
-      className="tracking-widest mt-40 m-auto flex"
+      className="tracking-widest  mr-8 fixed bottom-10 right-8"
       onClick={handleClick}
     >
       TOPへもどる
