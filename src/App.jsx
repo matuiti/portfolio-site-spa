@@ -1,15 +1,14 @@
 import "@/App.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Contents from "@/components/Contents"
+import ContentsArea from "@/components/ContentsArea"
 import AnimationsArea from "@/components/AnimationsArea"
 import { useState, createContext } from "react"
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const handleChangeModeContext = createContext();
+export const handleChangeModeContext = createContext()
 // eslint-disable-next-line react-refresh/only-export-components
-export const modeContext = createContext();
-
+export const modeContext = createContext()
 
 function App() {
   const [mode, setMode] = useState("home")
@@ -20,7 +19,7 @@ function App() {
       return (
         <>
           <Header />
-          <Contents />
+          <ContentsArea />
           <AnimationsArea />
           <Footer />
         </>
@@ -29,7 +28,7 @@ function App() {
       return (
         <>
           <Header />
-          <Contents />
+          <ContentsArea />
           <Footer />
         </>
       )
