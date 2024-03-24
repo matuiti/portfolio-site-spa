@@ -4,15 +4,16 @@ import ReturnButton from "@/components/ui/returnButton"
 import { modeContext,handleChangeModeContext } from "@/App"
 import Omikuji from "./contents/omikuji/Omikuji"
 import Stopwatch from "./contents/stopwatch/Stopwatch"
+import YudetamagoTimer from "./contents/yudetamago-timer/YudetamagoTimer"
 
 const title = "Contents"
 const description = `現在開発中です！`
 const contents = [
   { name: "Stopwatch" },
   { name: "Omikuji" },
+  { name: "YudetamagoTimer" },
   // { name: "SaruGame" },
   // { name: "YakinikuTetris" },
-  // { name: "YudetamagoTimer" },
 ]
 
 const Contents = () => {
@@ -26,6 +27,8 @@ const Contents = () => {
 
   const contentOutput = (current) => {
     switch (current) {
+      case "YudetamagoTimer":
+        return <YudetamagoTimer />
       case "Stopwatch":
         return <Stopwatch />
       case "Omikuji":
