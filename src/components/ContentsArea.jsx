@@ -9,9 +9,9 @@ import YudetamagoTimer from "./contents/yudetamago-timer/YudetamagoTimer"
 const title = "Contents"
 const description = `現在開発中です！`
 const contents = [
-  { name: "Stopwatch" },
-  { name: "Omikuji" },
-  { name: "YudetamagoTimer" },
+  { name: "ゆでたまごタイマー" },
+  { name: "おみくじ" },
+  { name: "ストップウォッチ" },
   // { name: "SaruGame" },
   // { name: "YakinikuTetris" },
 ]
@@ -27,11 +27,11 @@ const Contents = () => {
 
   const contentOutput = (current) => {
     switch (current) {
-      case "YudetamagoTimer":
+      case "ゆでたまごタイマー":
         return <YudetamagoTimer />
-      case "Stopwatch":
+      case "ストップウォッチ":
         return <Stopwatch />
-      case "Omikuji":
+      case "おみくじ":
         return <Omikuji />
       default:
         break;

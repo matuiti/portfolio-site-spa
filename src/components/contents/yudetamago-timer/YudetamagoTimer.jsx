@@ -6,16 +6,16 @@ import Tips from "./Tips"
 // eslint-disable-next-line react-refresh/only-export-components
 export const IsTipsContext = createContext()
 
-function App() {
+function YudetamagoTimer() {
   const [isTips, setIsTips] = useState(false)
 
   return (
     <div
       style={{
         maxWidth: "375px",
-        letterSpacing:"0px",
+        letterSpacing: "0px",
       }}
-      className={"min-h-screen w-full m-auto border"}
+      className={"font-MochiyPopOne min-h-screen w-full m-auto border"}
     >
       <IsTipsContext.Provider value={[isTips, setIsTips]}>
         <Header />
@@ -25,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default YudetamagoTimer
