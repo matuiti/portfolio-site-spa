@@ -61,7 +61,7 @@ const Omikuji = () => {
         )}
         {isDrawing && (
           <video autoPlay ref={videoRef}>
-            <source src="public/images/omikuji/waiting.mp4" type="video/mp4" />
+            <source src="/images/omikuji/waiting.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
@@ -69,7 +69,7 @@ const Omikuji = () => {
           <video autoPlay onEnded={() => setIsResultPlaying(false)}>
             {/* おみくじの結果の再生が終了したらisResultPlayingをfalseに設定 */}
             <source
-              src={`public/images/omikuji/${omikujiResult}`}
+              src={`/images/omikuji/${omikujiResult}`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -77,7 +77,7 @@ const Omikuji = () => {
         )}
         {/* 画像の場合 */}
         {/* {omikujiResult && !isDrawing && (
-          <img src={`public/images/omikuji/${omikujiResult}`} alt="omikuji result" />
+          <img src={`/images/omikuji/${omikujiResult}`} alt="omikuji result" />
         )} */}
       </div>
       <button
@@ -92,4 +92,4 @@ const Omikuji = () => {
   );
 };
 
-export default Omikuji;
+export default Omikuji
