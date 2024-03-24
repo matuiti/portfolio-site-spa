@@ -56,7 +56,7 @@ const Contents = () => {
     } else if (mode === "contents") {
       return (
         <>
-          <div className="w-full py-32 px-10">
+          <div className="w-full px-10">
             {contentOutput(current)}
           </div>
           <ReturnButton />
