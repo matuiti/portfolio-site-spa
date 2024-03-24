@@ -1,26 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from 'react';
 
 const Omikuji = () => {
-  const omikujiList = [
-    "大吉", "吉", "中吉", "小吉", "末吉", "凶", "大凶"
-  ];
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [omikujiResult, setOmikujiResult] = useState(null);
+  const videoRef = useRef(null); // ビデオ要素の参照
 
-  const [currentOmikuji, setCurrentOmikuji] = useState("");
+  useEffect(() => {
+    if (isDrawing) {
+      // 待ち動画の再生が終了したらおみくじの結果を決定
+      const waitingVideo = videoRef.current;
+      if (waitingVideo) {
+        waitingVideo.play();
+        waitingVideo.onended = () => {
+          const min = 1; // waiting.mp4を除外するために1から始める
+          const max = 2; // ビデオファイル名の数
+          const rand = Math.floor(Math.random() * (max - min + 1)) + min;
+          if (rand === 1) {
+            setOmikujiResult("daikiti.mp4");
+          } else {
+            setOmikujiResult("daikyo.mp4");
+          }
+          setIsDrawing(false); // おみくじ結果の表示後にisDrawingをfalseに設定
+        };
+      }
+    }
+  }, [isDrawing]);
 
   const handleClick = () => {
-    const min = 0;
-    const max = omikujiList.length - 1;
-    const rand = Math.floor(Math.random() * (max + 1 - min)) + min;
-    setCurrentOmikuji(omikujiList[rand]);
-  }
+    setIsDrawing(true);
+  };
 
   return (
-    <div className={`text-center flex flex-col gap-20 pb-6 bg-gray-300 m-auto shadow-md md:w-1/2`}>
-      <h1 className={`font-bold text-3xl bg-blue-500 py-4 shadow-md`}>運勢を占う</h1>
-      <p className={`${currentOmikuji === "大吉" ? "text-red-600 font-bold" : "text-black"} bg-yellow-200 m-auto py-10 px-10 text-6xl shadow-md w-80`}>{currentOmikuji ? currentOmikuji : "^=^b"}</p>
-      <button className={`shadow-md pt-1 pb-1 pl-4 pr-4 mx-auto -mt-8 bg-green-700 text-white hover:cursor-pointer hover:transition-all rounded-md`} onClick={handleClick}>おみくじを引く</button>
+    <div className="container">
+      <h1>おみくじアプリ</h1>
+      <button onClick={handleClick} disabled={isDrawing}>
+        おみくじを引く
+      </button>
+      <div className="media-container">
+        {isDrawing && (
+          <video autoPlay muted ref={videoRef}>
+            <source src="public/images/omikuji/waiting.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {omikujiResult && !isDrawing && (
+          <video autoPlay muted>
+            <source src={`public/images/omikuji/${omikujiResult}`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {/* 画像の場合 */}
+        {/* {omikujiResult && !isDrawing && (
+          <img src={`public/images/omikuji/${omikujiResult}`} alt="omikuji result" />
+        )} */}
+      </div>
+      {omikujiResult && (
+        <h2>結果: {omikujiResult}</h2>
+      )}
     </div>
   );
-}
+};
 
 export default Omikuji;
