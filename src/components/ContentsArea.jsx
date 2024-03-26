@@ -49,7 +49,7 @@ const Contents = () => {
   const renderSections = () => {
     if (mode === "home") {
       return (
-        <div>
+        <div className="containe text-center">
           <SectionHeader title={title} description={description} />
           <ul className="w-4/5 m-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
             {contentsOutput}
@@ -65,7 +65,7 @@ const Contents = () => {
     }
   }
 
-  return <section className="container text-center">{renderSections()}</section>
+  return <section className="w-full">{renderSections()}</section>
 }
 
 export default Contents
