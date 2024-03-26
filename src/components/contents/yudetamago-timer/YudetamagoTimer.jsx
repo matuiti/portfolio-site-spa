@@ -12,10 +12,11 @@ function YudetamagoTimer() {
   return (
     <div
       style={{
-        maxWidth: "375px",
+        minWidth: "360px",
+        maxWidth: "400px",
         letterSpacing: "0px",
       }}
-      className={"font-MochiyPopOne min-h-screen w-full m-auto border"}
+      className={"bg-white font-MochiyPopOne m-auto"}
     >
       <IsTipsContext.Provider value={[isTips, setIsTips]}>
         <Header />

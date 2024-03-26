@@ -7,7 +7,7 @@ const Header = () => {
     changeMode("home")
   }
   return (
-    <header className="cursor-pointer mb-10 pt-1 pb-2 px-4 text-md tracking-wide text-neutral-400 items-center bg-gray-700 shadow-sm" onClick={handleClick}>Portfolio</header>
+    <header className="cursor-pointer pt-1 pb-2 px-4 text-md tracking-wide text-neutral-400 items-center bg-gray-700 shadow-sm" onClick={handleClick}>Portfolio</header>
   )
 }
 

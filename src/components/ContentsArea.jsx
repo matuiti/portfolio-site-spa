@@ -1,7 +1,7 @@
-import { useState,useContext } from "react"
+import { useState, useContext } from "react"
 import SectionHeader from "@/components/SectionHeader"
-import ReturnButton from "@/components/ui/returnButton"
-import { modeContext,handleChangeModeContext } from "@/App"
+// import ReturnButton from "@/components/ui/returnButton"
+import { modeContext, handleChangeModeContext } from "@/App"
 import Omikuji from "./contents/omikuji/Omikuji"
 import Stopwatch from "./contents/stopwatch/Stopwatch"
 import YudetamagoTimer from "./contents/yudetamago-timer/YudetamagoTimer"
@@ -34,7 +34,7 @@ const Contents = () => {
       case "おみくじ":
         return <Omikuji />
       default:
-        break;
+        break
     }
   }
   const contentsOutput = contents.map((content) => (
@@ -49,20 +49,18 @@ const Contents = () => {
   const renderSections = () => {
     if (mode === "home") {
       return (
-        <>
+        <div className="mt-10">
           <SectionHeader title={title} description={description} />
           <ul className="w-full pt-10 pb-16 px-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
             {contentsOutput}
           </ul>
-        </>
+        </div>
       )
     } else if (mode === "contents") {
       return (
         <>
-          <div className="w-full px-10">
-            {contentOutput(current)}
-          </div>
-          <ReturnButton />
+          {contentOutput(current)}
+          {/* <ReturnButton /> */}
         </>
       )
     }
