@@ -1,6 +1,3 @@
-body {
-  background-color: #ccc;
-}
 body #root {
   display: flex;
   flex-direction: column;
