@@ -46,7 +46,7 @@ const Stopwatch = () => {
   }
 
   return (
-    <div>
+    <div className="text-center">
       <h1 className="text-4xl font-bold mb-8">Stopwatch App</h1>
       <div className="flex flex-col items-center justify-center">
         <div className="text-6xl">{formatTime(time)}</div>
