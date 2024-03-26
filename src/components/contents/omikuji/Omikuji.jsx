@@ -44,7 +44,7 @@ const Omikuji = () => {
   return (
     <div
       style={{ minWidth: "360px",maxWidth:"400px" }}
-      className={`h-screen m-auto text-center pb-6 bg-gray-300 shadow-md`}
+      className={`m-auto text-center pb-6 bg-gray-300 shadow-md`}
     >
       <h1
         className={`mb-10 font-bold shadow-white text-3xl bg-purple-500 py-4 shadow-md`}

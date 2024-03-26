@@ -49,9 +49,9 @@ const Contents = () => {
   const renderSections = () => {
     if (mode === "home") {
       return (
-        <div className="mt-10">
+        <div>
           <SectionHeader title={title} description={description} />
-          <ul className="w-full pt-10 pb-16 px-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
+          <ul className="w-4/5 m-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:container gap-1">
             {contentsOutput}
           </ul>
         </div>
@@ -60,13 +60,12 @@ const Contents = () => {
       return (
         <>
           {contentOutput(current)}
-          {/* <ReturnButton /> */}
         </>
       )
     }
   }
 
-  return <section className="m-auto text-center">{renderSections()}</section>
+  return <section className="container text-center">{renderSections()}</section>
 }
 
 export default Contents

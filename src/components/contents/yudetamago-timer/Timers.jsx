@@ -17,7 +17,7 @@ const Timers = () => {
   }
 
   return (
-    <ul style={{ display: "flex", flexDirection: "column",rowGap:"36px",padding:"50px 0"}}>
+    <ul style={{ display: "flex", flexDirection: "column",rowGap:"30px",paddingTop:"30px"}}>
       <Katayude initialTime={initialTimers.katayude} formatTime={formatTime} />
       <Hannjuku initialTime={initialTimers.hannjuku} formatTime={formatTime} />
       <Onnsenn  initialTime={initialTimers.onnsenn } formatTime={formatTime} />

@@ -85,7 +85,7 @@ const Onnsenn = ({ initialTime, formatTime }) => {
           </button>
         </div>
       </div>
-      <p style={{textAlign:"center",paddingTop:"22px"}}>温泉卵は、<span style={{color:"#FF774E"}}>お湯にいれ火を止めてから</span><br />スタートを押してね！</p>
+      <p style={{textAlign:"center",paddingTop:"22px",paddingBottom:".5em"}}>温泉卵は、<span style={{color:"#FF774E"}}>お湯にいれ火を止めてから</span><br />スタートを押してね！</p>
     </li>
   )
 }

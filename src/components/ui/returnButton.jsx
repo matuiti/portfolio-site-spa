@@ -9,7 +9,7 @@ function ReturnButton() {
   }
   return (
     <Button
-      className="tracking-widest bg-gray-500"
+      className="tracking-widest bg-transparent"
       onClick={handleClick}
     >
       TOPへもどる
