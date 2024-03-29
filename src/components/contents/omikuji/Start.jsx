@@ -1,10 +1,13 @@
-function Start() {
+function Start({setCurrentScene}) {
+  const handleClick = () => {
+    setCurrentScene("waiting")
+  }
   return (
     <div className="relative flex justify-center items-center">
       <img src="/images/omikuji/start.png" />
-      <button style={{ top:"570px", fontSize:"25px", backgroundColor:"#D90000",width:"279px",height:"66px"}} className="absolute flex justify-center items-center text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
+      <button onClick={handleClick} style={{ top:"570px", fontSize:"25px", backgroundColor:"#D90000",width:"279px",height:"66px"}} className="absolute flex justify-center items-center text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
       おみくじを引く
-      <svg style={{marginLeft:"8px", marginTop:"7px",width:"35px",height:"35px",viewBox:"0 0 35.009 32.023"}}>
+      <svg style={{marginLeft:"8px", marginTop:"7px",width:"35px",height:"35px",viewBox:"0 0 35.009 32.023"}} xmlns="http://www.w3.org/2000/svg">
         <g transform="matrix(0.966, -0.259, 0.259, 0.966, -7.716, 5.866)">
           <path id="パス_1" data-name="パス 1" d="M171.236,8.607c1.773.649,3.9-.716,4.756-3.048S176.1.81,174.327.161s-3.9.716-4.756,3.049S169.463,7.959,171.236,8.607Z" transform="translate(-153.68 0)" fill="#fff"/>
           <path id="パス_2" data-name="パス 2" d="M22.144,70.755c1.855-.161,3.187-2.269,2.976-4.709s-1.886-4.288-3.741-4.128-3.187,2.269-2.976,4.71S20.289,70.915,22.144,70.755Z" transform="translate(-11.325 -58.428)" fill="#fff"/>

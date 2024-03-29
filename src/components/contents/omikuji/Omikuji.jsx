@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Start from "./Start"
 import Waiting from "./Waiting"
-import { Result } from "postcss"
+import Result  from "./Result"
 import StandBy from "./StandBy"
 
 function Omikuji() {
@@ -11,13 +11,13 @@ function Omikuji() {
     switch (scene) {
 
       case "start":
-        return <Start />
+        return <Start setCurrentScene={setCurrentScene} />
       case "waiting":
-        return <Waiting />
+        return <Waiting setCurrentScene={setCurrentScene} />
       case "result":
-        return <Result />
+        return <Result setCurrentScene={setCurrentScene} />
       case "standBy":
-        return <StandBy />
+        return <StandBy setCurrentScene={setCurrentScene} />
       default:
         break;
     }
