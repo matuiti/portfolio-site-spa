@@ -5,7 +5,7 @@ function Result({ setCurrentScene }) {
 
   useEffect(() => {
     // GIF画像の再生時間をミリ秒単位で設定する
-    const gifDuration = 3000
+    const gifDuration = 1000
 
     // GIF画像の再生時間が経過した後に処理を実行する
     const timer = setTimeout(() => {
@@ -16,7 +16,12 @@ function Result({ setCurrentScene }) {
     return () => clearTimeout(timer)
   }, [setCurrentScene])
 
-  const handleClick = () => {}
+  const handleRetry = () => {
+    setCurrentScene("waiting")
+  }
+  const handleToTop = () => {
+    setCurrentScene("start")
+  }
 
   return (
     <div className="relative flex justify-center items-center">
@@ -24,7 +29,7 @@ function Result({ setCurrentScene }) {
       {isTime && (
         <>
           <button
-            onClick={handleClick}
+            onClick={handleRetry}
             style={{
               top: "560px",
               fontSize: "25px",
@@ -84,7 +89,7 @@ function Result({ setCurrentScene }) {
             </svg>
           </button>
           <button
-            onClick={handleClick}
+            onClick={handleToTop}
             style={{
               top: "640px",
               fontSize: "25px",
