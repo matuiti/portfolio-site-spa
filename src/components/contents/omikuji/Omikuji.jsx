@@ -2,7 +2,6 @@ import { useState } from "react"
 import Start from "./Start"
 import Waiting from "./Waiting"
 import Result  from "./Result"
-import StandBy from "./StandBy"
 
 function Omikuji() {
   const [ currentScene, setCurrentScene ] = useState("start")// start, waiting, result, stand-by の4種類
@@ -16,8 +15,6 @@ function Omikuji() {
         return <Waiting setCurrentScene={setCurrentScene} />
       case "result":
         return <Result setCurrentScene={setCurrentScene} />
-      case "standBy":
-        return <StandBy setCurrentScene={setCurrentScene} />
       default:
         break;
     }
