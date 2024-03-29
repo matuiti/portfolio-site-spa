@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function Result({ setCurrentScene }) {
+function Result({ setCurrentScene,result }) {
   const [isTime, setIsTime] = useState(false)
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Result({ setCurrentScene }) {
 
   return (
     <div className="relative flex justify-center items-center">
-      <img src="/images/omikuji/kiti.png" />
+      <img src={`/images/omikuji/${result}`} />
       {isTime && (
         <>
           <button
@@ -95,7 +95,7 @@ function Result({ setCurrentScene }) {
               fontSize: "25px",
               width: "254px",
               height: "60px",
-              border:"5px solid black"
+              border: "5px solid black",
             }}
             className="bg-white border text-black absolute flex justify-center items-center font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
           >
