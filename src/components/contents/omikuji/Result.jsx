@@ -31,7 +31,7 @@ function Result({ setCurrentScene,result }) {
           <button
             onClick={handleRetry}
             style={{
-              top: "560px",
+              top: "64%",
               fontSize: "25px",
               width: "254px",
               height: "60px",
@@ -91,7 +91,7 @@ function Result({ setCurrentScene,result }) {
           <button
             onClick={handleToTop}
             style={{
-              top: "640px",
+              top: "74%",
               fontSize: "25px",
               width: "254px",
               height: "60px",
