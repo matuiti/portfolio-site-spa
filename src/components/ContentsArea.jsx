@@ -1,10 +1,11 @@
 import { useState, useContext } from "react"
 import SectionHeader from "@/components/SectionHeader"
 // import ReturnButton from "@/components/ui/returnButton"
-import { modeContext, handleChangeModeContext } from "@/App"
+import { currentModeContext, changeModeContext } from "@/App"
 import Omikuji from "./contents/omikuji/Omikuji"
 import Stopwatch from "./contents/stopwatch/Stopwatch"
 import YudetamagoTimer from "./contents/yudetamago-timer/YudetamagoTimer"
+import SaruGame from "./contents/sarugame/SaruGame"
 
 const title = "Contents"
 const description = `現在開発中です！`
@@ -12,14 +13,14 @@ const contents = [
   { name: "ゆでたまごタイマー" },
   { name: "おみくじ" },
   { name: "ストップウォッチ" },
-  // { name: "SaruGame" },
+  { name: "サルゲーム" },
   // { name: "YakinikuTetris" },
 ]
 
 const Contents = () => {
   const [current, setCurrent] = useState("")
-  const mode = useContext(modeContext)
-  const changeMode = useContext(handleChangeModeContext)
+  const currentMode = useContext(currentModeContext)
+  const changeMode = useContext(changeModeContext)
   const handleClick = (e) => {
     setCurrent(e.target.textContent)
     changeMode("contents")
@@ -33,6 +34,8 @@ const Contents = () => {
         return <Stopwatch />
       case "おみくじ":
         return <Omikuji />
+      case "サルゲーム":
+        return <SaruGame />
       default:
         break
     }
@@ -47,7 +50,7 @@ const Contents = () => {
     </li>
   ))
   const renderSections = () => {
-    if (mode === "home") {
+    if (currentMode === "home") {
       return (
         <div className="containe text-center">
           <SectionHeader title={title} description={description} />
@@ -56,12 +59,8 @@ const Contents = () => {
           </ul>
         </div>
       )
-    } else if (mode === "contents") {
-      return (
-        <>
-          {contentOutput(current)}
-        </>
-      )
+    } else if (currentMode === "contents") {
+      return <>{contentOutput(current)}</>
     }
   }
 

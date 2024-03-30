@@ -6,16 +6,16 @@ import AnimationsArea from "@/components/AnimationsArea"
 import { useState, createContext } from "react"
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const handleChangeModeContext = createContext()
+export const changeModeContext = createContext()
 // eslint-disable-next-line react-refresh/only-export-components
-export const modeContext = createContext()
+export const currentModeContext = createContext()
 
 function App() {
-  const [mode, setMode] = useState("home")
-  const handleChangeMode = (newMode) => setMode(newMode)
+  const [currentMode, setMode] = useState("home")
+  const changeMode = (newMode) => setMode(newMode)
 
   const renderSections = () => {
-    if (mode === "home") {
+    if (currentMode === "home") {
       return (
         <>
           <Header />
@@ -24,7 +24,7 @@ function App() {
           <Footer />
         </>
       )
-    } else if (mode === "contents") {
+    } else if (currentMode === "contents") {
       return (
         <>
           <Header />
@@ -36,11 +36,11 @@ function App() {
   }
 
   return (
-    <handleChangeModeContext.Provider value={handleChangeMode}>
-      <modeContext.Provider value={mode}>
+    <changeModeContext.Provider value={changeMode}>
+      <currentModeContext.Provider value={currentMode}>
         {renderSections()}
-      </modeContext.Provider>
-    </handleChangeModeContext.Provider>
+      </currentModeContext.Provider>
+    </changeModeContext.Provider>
   )
 }
 
