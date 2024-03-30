@@ -1,7 +1,5 @@
-import { useState, useContext } from "react"
+import { useState } from "react"
 import SectionHeader from "@/components/SectionHeader"
-// import ReturnButton from "@/components/ui/returnButton"
-import { currentModeContext, changeModeContext } from "@/App"
 import Omikuji from "./contents/omikuji/Omikuji"
 import Stopwatch from "./contents/stopwatch/Stopwatch"
 import YudetamagoTimer from "./contents/yudetamago-timer/YudetamagoTimer"
@@ -17,13 +15,11 @@ const contents = [
   // { name: "YakinikuTetris" },
 ]
 
-const Contents = () => {
+const Contents = ({currentMode,setMode}) => {
   const [current, setCurrent] = useState("")
-  const currentMode = useContext(currentModeContext)
-  const changeMode = useContext(changeModeContext)
   const handleClick = (e) => {
     setCurrent(e.target.textContent)
-    changeMode("contents")
+    setMode("contents")
   }
 
   const contentOutput = (current) => {

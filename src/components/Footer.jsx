@@ -1,10 +1,10 @@
 import ReturnButton from "./ui/returnButton"
 
-const Footer = () => {
+const Footer = ({setMode}) => {
   return (
     <footer className="bg-gray-700  w-full flex justify-center items-center gap-x-12 text-center">
       <small className="text-gray-500">© Matuiti</small>
-      <ReturnButton />
+      <ReturnButton setMode={setMode} />
       </footer>
   )
 }

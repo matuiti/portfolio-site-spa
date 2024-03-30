@@ -1,10 +1,7 @@
-import { useContext } from "react"
-import { changeModeContext } from "../App"
 
-const Header = () => {
-  const changeMode = useContext(changeModeContext)
+const Header = ({setMode}) => {
   const handleClick = () => {
-    changeMode("home")
+    setMode("home")
   }
   return (
     <header

@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button"
-import { useContext } from "react"
-import { changeModeContext } from "../../App"
 
-function ReturnButton() {
-  const changeMode = useContext(changeModeContext)
+function ReturnButton({setMode}) {
   const handleClick = () => {
-    changeMode("home")
+    setMode("home")
   }
   return (
     <Button className="tracking-widest bg-transparent" onClick={handleClick}>
