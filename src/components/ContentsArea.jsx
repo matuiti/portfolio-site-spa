@@ -1,24 +1,23 @@
 import SectionHeader from "@/components/SectionHeader"
+import { Link } from "react-router-dom"
 
 const title = "Contents"
 const description = `現在開発中です！`
 const contents = [
-  { name: "yudetamagotimer",nameJapanese:"ゆでたまごタイマー" },
-  { name: "omikuji",nameJapanese:"猫みくじ" },
-  { name: "stopwatch",nameJapanese:"ストップウォッチ" },
-  { name: "sarugame",nameJapanese:"サルゲーム" },
+  { name: "yudetamagotimer", nameJapanese: "ゆでたまごタイマー", path: "/yudetamagotimer", },
+  { name: "omikuji", nameJapanese: "猫みくじ", path: "/omikuji" },
+  { name: "stopwatch", nameJapanese: "ストップウォッチ", path: "/stopwatch" },
+  { name: "sarugame", nameJapanese: "サルゲーム", path: "/sarugame" },
   // { name: "YakinikuTetris" },
 ]
 
 const Contents = () => {
-
   const contentsOutput = contents.map((content) => (
-    <li
-      key={content.name}
-      className="border border-solid border-green-700 cursor-pointer"
-    >
-      {content.nameJapanese}
-    </li>
+    <Link to={content.path} key={content.name}>
+      <li className="border border-solid border-green-700 cursor-pointer">
+        {content.nameJapanese}
+      </li>
+    </Link>
   ))
   return (
     <section className="w-full">

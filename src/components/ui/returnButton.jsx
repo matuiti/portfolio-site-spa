@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 function ReturnButton() {
-  const handleClick = () => {
-  }
   return (
-    <Button className="tracking-widest bg-transparent" onClick={handleClick}>
-      TOPへもどる
+    <Button className="tracking-widest bg-transparent">
+      <Link to="/">TOPへもどる</Link>
     </Button>
   )
 }
