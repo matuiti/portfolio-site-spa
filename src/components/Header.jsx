@@ -6,10 +6,10 @@ const Header = () => {
       <Link to="/"><h1 className="italic text-gray-400 mr-4 hover:text-white">Portfolio</h1></Link>
       <nav>
         <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm">
-          <li className="hover:text-white">サルゲーム</li>
-          <li className="hover:text-white">猫みくじ</li>
-          <li className="hover:text-white">ストップウォッチ</li>
-          <li className="hover:text-white">ゆでたまごタイマー</li>
+          <Link to="/sarugame"><li className="hover:text-white">サルゲーム</li></Link>
+          <Link to="/omikuji"><li className="hover:text-white">猫みくじ</li></Link>
+          <Link to="/stopwatch"><li className="hover:text-white">ストップウォッチ</li></Link>
+          <Link to="/yudetamagotimer"><li className="hover:text-white">ゆでたまごタイマー</li></Link>
         </ul>
       </nav>
     </header>
