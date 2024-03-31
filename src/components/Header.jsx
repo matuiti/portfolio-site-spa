@@ -1,7 +1,6 @@
 
-const Header = ({setMode}) => {
+const Header = () => {
   const handleClick = () => {
-    setMode("home")
   }
   return (
     <header
