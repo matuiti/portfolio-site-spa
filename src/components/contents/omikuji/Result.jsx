@@ -31,12 +31,12 @@ function Result({ setCurrentScene,result }) {
           <button
             onClick={handleRetry}
             style={{
-              top: "64%",
-              fontSize: "25px",
-              width: "254px",
-              height: "60px",
+              top: "70%",
+              fontSize: "1.1em",
+              width: "80%",
+              height: "9%",
             }}
-            className="bg-black none absolute flex justify-center items-center text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+            className="bg-black none absolute flex justify-center items-center text-white font-bold rounded-full focus:outline-none focus:shadow-outline"
           >
             もう一度引く
             <svg
@@ -91,13 +91,13 @@ function Result({ setCurrentScene,result }) {
           <button
             onClick={handleToTop}
             style={{
-              top: "74%",
-              fontSize: "25px",
-              width: "254px",
-              height: "60px",
-              border: "5px solid black",
+              top: "80%",
+              fontSize: "1.1em",
+              width: "80%",
+              height: "9%",
+              border: "3px solid black",
             }}
-            className="bg-white border text-black absolute flex justify-center items-center font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+            className="bg-white border text-black absolute flex justify-center items-center font-bold rounded-full focus:outline-none focus:shadow-outline"
           >
             TOPへもどる
             <svg

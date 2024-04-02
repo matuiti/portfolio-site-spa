@@ -12,8 +12,7 @@ function YudetamagoTimer() {
   return (
     <div
       style={{
-        minWidth: "360px",
-        maxWidth: "400px",
+        maxWidth: "360px",
         letterSpacing: "0px",
       }}
       className={"bg-white font-MochiyPopOne m-auto"}
