@@ -32,7 +32,7 @@ function Result({ setCurrentScene,result }) {
             onClick={handleRetry}
             style={{
               top: "68%",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               width: "76%",
               height: "10%",
             }}
@@ -92,7 +92,7 @@ function Result({ setCurrentScene,result }) {
             onClick={handleToTop}
             style={{
               top: "80%",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               width: "76%",
               height: "10%",
               border: "3px solid black",
