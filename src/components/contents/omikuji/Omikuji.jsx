@@ -49,7 +49,7 @@ function Omikuji() {
   }
 
 
-  return <div style={{width:"200px"}}>{changeScene(currentScene)}</div>
+  return <div style={{width:"240px"}}>{changeScene(currentScene)}</div>
 }
 
 export default Omikuji

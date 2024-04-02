@@ -31,10 +31,10 @@ function Result({ setCurrentScene,result }) {
           <button
             onClick={handleRetry}
             style={{
-              top: "70%",
-              fontSize: "1.1em",
-              width: "80%",
-              height: "9%",
+              top: "68%",
+              fontSize: "1.2rem",
+              width: "76%",
+              height: "10%",
             }}
             className="bg-black none absolute flex justify-center items-center text-white font-bold rounded-full focus:outline-none focus:shadow-outline"
           >
@@ -92,9 +92,9 @@ function Result({ setCurrentScene,result }) {
             onClick={handleToTop}
             style={{
               top: "80%",
-              fontSize: "1.1em",
-              width: "80%",
-              height: "9%",
+              fontSize: "1.2rem",
+              width: "76%",
+              height: "10%",
               border: "3px solid black",
             }}
             className="bg-white border text-black absolute flex justify-center items-center font-bold rounded-full focus:outline-none focus:shadow-outline"
