@@ -5,7 +5,7 @@ function Start({setCurrentScene}) {
   return (
     <div className="relative flex justify-center items-center">
       <img src="/images/omikuji/start.png" />
-      <button onClick={handleClick} style={{ top:"68%", fontSize:"1.2em", backgroundColor:"#D90000",width:"88%",height:"10%"}} className="absolute flex justify-center items-center text-white font-bold rounded-full focus:outline-none focus:shadow-outline">
+      <button onClick={handleClick} style={{ top:"68%", fontSize:"1.1em", backgroundColor:"#D90000",width:"88%",height:"10%"}} className="absolute flex justify-center items-center text-white font-bold rounded-full focus:outline-none focus:shadow-outline">
       おみくじを引く
       <svg style={{marginLeft:"8px", marginTop:"7px",width:"35px",height:"35px",viewBox:"0 0 35.009 32.023"}} xmlns="http://www.w3.org/2000/svg">
         <g transform="matrix(0.966, -0.259, 0.259, 0.966, -7.716, 5.866)">
