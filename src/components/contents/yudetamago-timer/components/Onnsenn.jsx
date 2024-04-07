@@ -41,7 +41,7 @@ const Onnsenn = ({ initialTime, formatTime }) => {
   }
 
   return (
-    <li style={{ backgroundColor: "#FFF3CE", padding: "20px 8px 16px" }}>
+    <li style={{ backgroundColor: "#FFF3CE", padding: "20px 8px 16px",marginTop:"-14px" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div
           style={{
