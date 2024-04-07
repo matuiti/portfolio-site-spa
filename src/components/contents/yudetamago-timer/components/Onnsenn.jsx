@@ -41,14 +41,14 @@ const Onnsenn = ({ initialTime, formatTime }) => {
   }
 
   return (
-    <li style={{backgroundColor:"#FFF3CE",padding:"20px 8px 16px"}}>
+    <li style={{ backgroundColor: "#FFF3CE", padding: "20px 8px 16px" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop:"12px"
+            marginTop: "12px",
           }}
         >
           <img
@@ -59,7 +59,8 @@ const Onnsenn = ({ initialTime, formatTime }) => {
         <div
           style={{
             color: "#492C15",
-            fontSize: "56px",
+            fontSize: "50px",
+            marginLeft: "-10px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -71,8 +72,8 @@ const Onnsenn = ({ initialTime, formatTime }) => {
           <button
             style={{
               margin: "auto",
-              width: "75px",
-              height: "75px",
+              width: "70px",
+              height: "70px",
               backgroundColor: isRunning ? "#4ED0FF" : "#FF774E",
               borderRadius: "50%",
               fontSize: "14px",
@@ -85,7 +86,18 @@ const Onnsenn = ({ initialTime, formatTime }) => {
           </button>
         </div>
       </div>
-      <p style={{textAlign:"center",paddingTop:"22px",paddingBottom:".5em"}}>温泉卵は、<span style={{color:"#FF774E"}}>お湯にいれ火を止めてから</span><br />スタートを押してね！</p>
+      <p
+        style={{
+          textAlign: "center",
+          paddingTop: "22px",
+          paddingBottom: ".5em",
+        }}
+      >
+        温泉卵は、
+        <span style={{ color: "#FF774E" }}>お湯にいれ火を止めてから</span>
+        <br />
+        スタートを押してね！
+      </p>
     </li>
   )
 }

@@ -15,7 +15,7 @@ function YudetamagoTimer() {
         maxWidth: "360px",
         letterSpacing: "0px",
       }}
-      className={"bg-white font-MochiyPopOne m-auto"}
+      className={"w-full bg-white font-MochiyPopOne m-auto"}
     >
       <IsTipsContext.Provider value={[isTips, setIsTips]}>
         <Header />

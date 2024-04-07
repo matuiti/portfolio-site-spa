@@ -41,7 +41,13 @@ const Katayude = ({ initialTime, formatTime }) => {
   }
 
   return (
-    <li style={{ display: "flex", justifyContent: "space-between" ,padding:"0 8px"}}>
+    <li
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "0 8px",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -58,7 +64,8 @@ const Katayude = ({ initialTime, formatTime }) => {
       <div
         style={{
           color: "#492C15",
-          fontSize: "56px",
+          fontSize: "50px",
+          marginLeft: "-10px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -70,8 +77,8 @@ const Katayude = ({ initialTime, formatTime }) => {
         <button
           style={{
             margin: "auto",
-            width: "75px",
-            height: "75px",
+            width: "70px",
+            height: "70px",
             backgroundColor: isRunning ? "#4ED0FF" : "#FF774E",
             borderRadius: "50%",
             fontSize: "14px",
