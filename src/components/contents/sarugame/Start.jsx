@@ -1,6 +1,12 @@
+import SoundToggle from "./ui/SoundToggle"
+import StartButton from "./ui/StartButton"
+
 const Start = () => {
   return (
-    <div>Start</div>
+    <div>
+      <SoundToggle />
+      <StartButton />
+    </div>
   )
 }
 
